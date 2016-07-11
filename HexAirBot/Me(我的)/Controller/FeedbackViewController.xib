@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackViewController">
+            <connections>
+                <outlet property="textFeild" destination="CpY-kC-TU4" id="eGq-D1-4iL"/>
+                <outlet property="textView" destination="OU9-mG-52r" id="X4H-5m-cla"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OU9-mG-52r">
+                    <rect key="frame" x="5" y="52" width="590" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="BlI-l8-Ol2"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="rX9-6T-7iV"/>
+                    </connections>
+                </textView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpY-kC-TU4">
+                    <rect key="frame" x="1" y="285" width="598" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="g3G-cf-Go6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="B3V-LO-i4y"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for your Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3H-SB-Beh">
+                    <rect key="frame" x="15" y="0.0" width="555" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="laQ-RA-eoo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sw-Ba-py9">
+                    <rect key="frame" x="200" y="360" width="200" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.29854287610261288" blue="0.23159626895623298" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8Pf-Ih-gqc"/>
+                        <constraint firstAttribute="width" constant="200" id="Dac-jV-uVU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Submint">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sumitBtnClick:" destination="-1" eventType="touchUpInside" id="rS6-mQ-GcS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CpY-kC-TU4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="14F-TV-Fo6"/>
+                <constraint firstAttribute="trailing" secondItem="OU9-mG-52r" secondAttribute="trailing" constant="5" id="1Ch-Kp-Kx1"/>
+                <constraint firstItem="0sw-Ba-py9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D0D-aN-b5U"/>
+                <constraint firstItem="OU9-mG-52r" firstAttribute="top" secondItem="g3H-SB-Beh" secondAttribute="bottom" constant="8" id="Fm6-ip-s50"/>
+                <constraint firstItem="g3H-SB-Beh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JUx-Dc-ImX"/>
+                <constraint firstAttribute="trailing" secondItem="CpY-kC-TU4" secondAttribute="trailing" constant="1" id="bC8-md-4b0"/>
+                <constraint firstItem="OU9-mG-52r" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cMb-l2-w1t"/>
+                <constraint firstItem="0sw-Ba-py9" firstAttribute="top" secondItem="CpY-kC-TU4" secondAttribute="bottom" constant="40" id="hJ9-VD-hN6"/>
+                <constraint firstItem="OU9-mG-52r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="iam-LM-Cbn"/>
+                <constraint firstItem="g3H-SB-Beh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="jwH-jk-PJ8"/>
+                <constraint firstItem="CpY-kC-TU4" firstAttribute="top" secondItem="OU9-mG-52r" secondAttribute="bottom" constant="33" id="kF9-Wt-tzv"/>
+                <constraint firstAttribute="trailing" secondItem="g3H-SB-Beh" secondAttribute="trailing" constant="30" id="oYU-Ne-Dqu"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

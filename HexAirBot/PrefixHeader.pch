@@ -1,0 +1,55 @@
+//
+//  PrefixHeader.pch
+//  HexAirBot
+//
+//  Created by HHH on 15/12/1.
+//  Copyright © 2015年 airbot. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import "UIView+Utils.h"
+#import "UIView+Nib.h"
+#import "UIView+Animation.h"
+#import "UIImage+Extension.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "UITextView+PlaceHolder.h"
+#import "RegularExpression.h"
+#import "MBProgressHUD+NJ.h"
+#import <AVOSCloud/AVOSCloud.h>
+#endif
+
+//代码块self的弱应用
+#define WS(weakSelf) __weak __typeof(&*self)weakSelf = self;
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define ObjectID @"ObjectID"
+
+#define UserIconData @"IconData"
+#define UserID @"UserID"
+#define UserName @"UserName"
+#define UserIntroduction @"UserIntroduction"
+#define UserIcon @"UserIcon"
+#define UserLocation @"UserLocation"
+#define UserDefaul  [NSUserDefaults standardUserDefaults]
+
+
+
+
+
+
+//languages setting
+#define CURR_LANG              ([[NSLocale preferredLanguages] objectAtIndex:0])
+#define getLocalizeString(key) ((![CURR_LANG isEqual:@"en-CN"] && ![CURR_LANG isEqual:@"zh-Hans-CN"] && ![CURR_LANG isEqual:@"zh-Hant-CN"]&&![CURR_LANG isEqual:@"en"]&&![CURR_LANG isEqual:@"zh-Hans"]&&![CURR_LANG isEqual:@"zh-Hant"] && ![CURR_LANG isEqual:@"en-US"] && ![CURR_LANG isEqual:@"zh-Hans-US"]) ? \
+[[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"en" ofType:@"lproj"]] localizedStringForKey:key value:@"" table:@"Languages"] \
+: [[NSBundle mainBundle] localizedStringForKey:key value:@"" table:@"Languages"])
+
+
+
+
+#endif /* PrefixHeader_pch */
